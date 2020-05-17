@@ -18,6 +18,7 @@ header cursor{
 header .current{
    color: rgb(240, 223, 223);
    font-weight: bolder;
+   border-right: solid 1px white;
 }
  header a:hover{
     color: white;
@@ -63,6 +64,13 @@ main{
    z-index: 9999;
 }
 
+.social1{
+   position: absolute;
+   margin-left: auto;
+   margin-bottom: auto;
+   z-index: auto;
+}
+
 .social:hover{
    opacity: 0.5;
 }
@@ -75,17 +83,18 @@ main{
    right: 50px;
    top: 0;
    border-radius: 0px 0px 5px 5px;
+   border-right: solid 1px white;
    z-index: 9999;
 }
 
 .navi1{
-   color: darkgrey;
+   color:darkgrey;
    font-weight: bolder;
    border-right: solid 1px white;
 }
 
 .navi2{
-   color: darkgrey;
+   color:darkgrey;
    font-weight: bolder;
    border-right: solid 1px white;
 }
