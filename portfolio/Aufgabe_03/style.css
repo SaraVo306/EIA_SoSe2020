@@ -63,6 +63,9 @@ main{
    z-index: 9999;
 }
 
+.social:hover{
+   opacity: 0.5;
+}
 
 .navi{
    display: inline-block;
