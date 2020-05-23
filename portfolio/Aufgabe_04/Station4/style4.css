@@ -1,0 +1,51 @@
+body{
+    background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L04/task_material/Station_4_Forms/images/bg.png);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container * {
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 180px;
+   
+}
+
+#headline{
+    display: inline-block;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 450px;
+    color: white;
+
+}
+
+form{
+    display: inline-block;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 280px;
+    text-align: left;
+    color: white;
+}
+
+#nachricht{
+    padding: 0 200px 80px 0;
+}
+
+#name{
+    width: 100px;
+}
+
+#textfeld{
+    width: 80px;
+}
+
+label, input{
+    display: inline-block;
+    margin-bottom: 5px;
+}

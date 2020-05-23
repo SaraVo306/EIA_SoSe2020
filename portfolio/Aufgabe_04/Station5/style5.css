@@ -1,0 +1,52 @@
+body{
+    background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L04/task_material/Station_5_Spaltenlayout/images/bg.png);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container * {
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 175px;
+   
+}
+
+#headline{
+    display: inline-block;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 80px;
+    color: white;
+}
+
+.drei{
+    column-count: 3;
+    width: 500px;
+    position: relative;
+    margin-left: 450px;
+    margin-top: 290px;
+    display: inline-block;
+    text-align: left;
+    hyphens: auto;
+    border-collapse: separate;
+    border-spacing: 90px;
+    column-gap: 20px;
+}
+
+.zwei{
+    column-count: 2;
+    width: 500px;
+    position: relative;
+    margin-left: 450px;
+    margin-top: -70px;
+    text-align: left;
+    hyphens: auto;
+    column-gap: 30px;
+    border-collapse: separate;
+
+
+}

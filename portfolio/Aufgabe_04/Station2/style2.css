@@ -1,0 +1,102 @@
+body{
+    background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-SoSe20/master/L04/task_material/Station_2_Hover/images/bg.png);
+}
+
+
+.container * {
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 175px;
+   
+}
+
+.muschel1{
+    position: absolute;
+    display: inline-block;
+    margin-left: 550px;
+    margin-top: 450px;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+}
+
+.muschel1:hover{
+    opacity: 0;
+}
+
+.perle1{
+    position: absolute;
+    display: inline-block;
+    margin-left: 550px;
+    margin-top: 450px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.perle1:hover{
+    opacity: 1.0;
+}
+
+.muschel2{
+    position: absolute;
+    display: inline-block;
+    margin-left: 700px;
+    margin-top: 350px;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+}
+
+.muschel2:hover{
+    opacity: 0;
+}
+
+.perle2{
+    position: absolute;
+    display: inline-block;
+    margin-left: 700px;
+    margin-top: 350px;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+}
+
+.perle2:hover{
+    opacity: 1.0;
+}
+
+.muschel3{
+    position: absolute;
+    display: inline-block;
+    margin-left: 860px;
+    margin-top: 450px;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+
+}
+
+.muschel3:hover{
+    opacity: 0;
+}
+
+.perle3{
+    position: absolute;
+    display: inline-block;
+    margin-left: 860px;
+    margin-top: 450px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.perle3:hover{
+    opacity: 1.0;
+}
+.überschrift{ 
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 500px;
+    margin-top:250px;
+    display: inline-block;
+    position: absolute;
+    font-size: 20pt;
+    letter-spacing: -1px;
+    color: white;
+}
