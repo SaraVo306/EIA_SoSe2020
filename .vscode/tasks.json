@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "typescript",
+			"tsconfig": "portfolio/Aufgabe_05/tsconfig.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build",
+			"label": "tsc: Erstellen – portfolio/Aufgabe_05/tsconfig.json"
+		}
+	]
+}
