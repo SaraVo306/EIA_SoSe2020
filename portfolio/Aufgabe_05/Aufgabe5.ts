@@ -54,6 +54,17 @@ console.log("Relativ zur Gesamtemission der Welt verursacht Asien damit " + asie
 console.log("Für Asien hat sich 2018 im Vergleich zu 2008 die Emission um " + asien3 + " % verändert.");
 console.log("2018 im Vergleich zu 2008 sind das " + asien4 + " kg CO2.");
 console.groupEnd();
+var australien2018: number = 2100.50;
+var australien2008: number = 1993.00;
+var australien2: number = australien2018 * 100 / welt;
+var australien3: number  = australien2018 / australien2008 - 1;
+var australien4: number = australien2018 - australien2008;
+console.group('Australien');
+console.log("Die Emission von Australien ist " + australien2018 + "kg CO2.");
+console.log("Relativ zur Gesamtemission der Welt verursacht Australien damit " + australien2 + "%.");
+console.log("Für Australien hat sich 2018 im Vergleich zu 2008 die Emission um " + australien3 + "% verändert.");
+console.log("2018 im Vergleich zu 2008 sind das " + australien4 + "kg CO2.");
+console.groupEnd();
 
 
 
