@@ -1,5 +1,5 @@
-//Aufgabe 7, Hilfe von Sade Babatunde//
-var allsamples: string []= ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
+//Aufgabe 7.1//
+var allSamples: string []= ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
 
 function playSample(mp3: string) {
     var allSounds: HTMLAudioElement = new Audio(mp3);
@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
     });
 
 
-//Teil2//
+//Aufgabe 7.2 Hilfe von Sade Babatunde//
 var drumbeat : string = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 var s : number = 1;
 function play(here) {
@@ -48,6 +48,6 @@ document.querySelector("#playbutton").addEventListener("click", function () {
         play(s - 1);
         s = s;
         s = s + 1;
-    }, 350);
+    }, 500);
 });
 });
