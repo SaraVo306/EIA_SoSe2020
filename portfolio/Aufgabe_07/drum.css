@@ -1,0 +1,70 @@
+body {
+    background:#fffae2;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 150px;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+div.container {
+    margin-top: 60px;
+    padding-top: 10px;
+    border: 5px solid #ffd8d1;
+    height: 500px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+#button1:hover, #button2:hover, #button3:hover, #button4:hover, #button5:hover, #button6:hover, #button7:hover, #button8:hover, #button9:hover {
+    opacity: 0.5;
+    animation: resteffect 1s infinite;
+}
+
+
+#button1, #button3, #button7, #button9 {
+    background-color: #f57461;
+    text-align: center;
+}
+
+#button4, #button2, #button6, #button8 {
+    background-color: #fdd782;
+    text-align: center;
+}
+
+#button5 {
+    background-color: #fcceb6;
+    text-align: center;
+}
+
+body #button1:active, #button2:active, #button3:active, #button4:active, #button5:active, #button6:active, #button7:active, #button8:active, #button9:active {
+    animation: none;
+    background-color: #eaf1d5;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 5px; 
+    background-color: #904d6f;
+}
+
+#playbutton:hover {
+     animation: playbuttoneffect 2s infinite;
+     opacity: 0.5;
+}
+ 

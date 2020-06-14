@@ -1,4 +1,3 @@
-"use strict";
 window.addEventListener('load', function () {
     document.querySelector(".europe").addEventListener('click', EuropaFunktion);
     function EuropaFunktion() {
@@ -55,7 +54,7 @@ window.addEventListener('load', function () {
         document.getElementById("em1").innerHTML = "2100.5";
         document.getElementById("titleRegion").innerHTML = "Australia";
         document.getElementById("em2").innerHTML = "6.75%";
-        document.getElementById("em3").innerHTML = "5.39%%";
+        document.getElementById("em3").innerHTML = "5.39%";
         document.getElementById("em4").innerHTML = "107.5";
         document.getElementById("text").innerHTML = "Australia";
         document.querySelector(".chartWrapper .chart").setAttribute("style", "height: 6.75%");
