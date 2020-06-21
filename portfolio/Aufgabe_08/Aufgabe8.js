@@ -43,7 +43,7 @@ function playSample(sound) {
     let audios = new Audio(sound);
     audios.play();
 }
-//Start-Stop// 
+//Start-Stop Fkt//
 function stop() {
     var play = document.querySelector("#playbutton");
     if (play.getAttribute("class") == "fas fa-play") {
