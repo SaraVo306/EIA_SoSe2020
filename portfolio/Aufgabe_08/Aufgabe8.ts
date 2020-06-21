@@ -43,7 +43,7 @@ function playSample(sound: string): void {
     if (isRecording) {
         givenBeat.push(sound);
     }
-    let audios = new Audio(sound);
+    let audios: HTMLAudioElement = new Audio(sound);
     audios.play();
 }
 //Start-Stop Fkt//
@@ -70,7 +70,7 @@ function startBeat(): void {
         if (counter >= givenBeat.length) {
             counter = 0;
         }
-    }, 400);
+    },                           400);
 }
 
 function stopBeat(): void {
