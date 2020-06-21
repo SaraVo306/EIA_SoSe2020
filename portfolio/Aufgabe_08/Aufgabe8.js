@@ -1,4 +1,8 @@
-//Aufgabe 8 mit Hilfe von Nadine Perisic//
+// Teile von Aufgabe 8 it Hilfe von Nadine Perisic//
+function playSample(mp3) {
+    var allSounds = new Audio(mp3);
+    allSounds.play();
+}
 window.addEventListener("load", function () {
     document.querySelector("#button1").addEventListener("click", function () {
         playSample("A.mp3");
@@ -31,18 +35,15 @@ window.addEventListener("load", function () {
     document.querySelector("#deletebutton").addEventListener("click", deleteBeat);
     document.querySelector("#micbutton").addEventListener("click", createBeat);
 });
-//Funktion für das Rekording//
+//Funktion zum Rekorden//
 function playSample(sound) {
-    if (isRecording)
-        : Boolean;
-    {
-        ;
+    if (isRecording) {
         givenBeat.push(sound);
     }
     let audios = new Audio(sound);
     audios.play();
 }
-//Stopp Button//
+//Start-Stop// 
 function stop() {
     var play = document.querySelector("#playbutton");
     if (play.getAttribute("class") == "fas fa-play") {
@@ -53,26 +54,28 @@ function stop() {
         play.setAttribute("class", "fas fa-play");
         stopBeat();
     }
-} //Loop// 
+}
+//Loop// 
 let beatIntervalId;
 var givenBeat = ["hihat.mp3", "kick.mp3", "snare.mp3"];
 let isRecording = false;
-var counter = 0;
-beatIntervalId = setInterval(function () {
-    playSample(givenBeat[counter]);
-    counter += 1;
-    if (counter >= givenBeat.length) {
-        counter = 0;
-    }
-}, 500);
-//Bei Stopp wird Intervall gelöscht//
+function startBeat() {
+    var counter = 0;
+    beatIntervalId = setInterval(function () {
+        playSample(givenBeat[counter]);
+        counter += 1;
+        if (counter >= givenBeat.length) {
+            counter = 0;
+        }
+    }, 500);
+}
 function stopBeat() {
     clearInterval(beatIntervalId);
 }
 function deleteBeat() {
     givenBeat = [];
 }
-//Funktion Aufnahme//
+//Aufnahme//
 function createBeat() {
     if (isRecording == false) {
         isRecording = true;
@@ -93,4 +96,5 @@ function isRec() {
         stopBeat();
     }
 }
+;
 //# sourceMappingURL=Aufgabe8.js.map
