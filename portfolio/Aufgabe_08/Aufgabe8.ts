@@ -1,4 +1,4 @@
-// Teile von Aufgabe 8 it Hilfe von Sade Babatunde//
+//Aufgabe 8 mit Hilfe von Nadine Perisic//
 
 window.addEventListener("load", function () {
     document.querySelector("#button1").addEventListener("click", function () {
@@ -34,15 +34,15 @@ window.addEventListener("load", function () {
     document.querySelector("#deletebutton").addEventListener("click", deleteBeat);
     document.querySelector("#micbutton").addEventListener("click", createBeat);
 });
-//Recording Funktion
-function playSample(sound) {
-    if (isRecording) {
+//Funktion für das Rekording//
+function playSample(sound: string): void {
+    if (isRecording): Boolean {;
         givenBeat.push(sound);
     }
-    let audios = new Audio(sound);
+    let audios: HTMLAudioElement = new Audio(sound);
     audios.play();
 }
-// Defieneren der Start-Stop Funktion// 
+//Stopp Button//
 function stop() {
     var play = document.querySelector("#playbutton");
     if (play.getAttribute("class") == "fas fa-play") {
@@ -53,9 +53,8 @@ function stop() {
         play.setAttribute("class", "fas fa-play");
         stopBeat();
     }
-}
-// Defieneren des Anfangsinterval (nachdem er gelöscht wurde kommt er nicht wieder)// 
-let beatIntervalId;
+}//Loop// 
+let beatIntervalId: string;
 var givenBeat: string[] = ["hihat.mp3", "kick.mp3", "snare.mp3"];
 let isRecording = false;
 function startBeat: () {
@@ -68,14 +67,14 @@ beatIntervalId = setInterval(function () {
     }
 },                           500);
 }
-// Wenn Stop dann wird Interval gelöscht
+//Bei Stopp wird Intervall gelöscht//
 function stopBeat(): void {
     clearInterval(beatIntervalId);
 }
 function deleteBeat(): void {
     givenBeat = [];
 }
-// Aufnahme Funktion (was für ein Käse)//
+//Funktion Aufnahme//
 function createBeat() {
     if (isRecording == false) {
         isRecording = true;
@@ -85,8 +84,8 @@ function createBeat() {
         isRecording = false;
     }
 }
-function isRec() {
-    var play:  = document.querySelector("#recbutton");
+function isRec(): void {
+    var play: = document.querySelector("#recbutton");
     if (play.getAttribute("id") == "micbutton") {
         play.setAttribute("id", "recbutton");
         createBeat();

@@ -1,4 +1,4 @@
-// Teile von Aufgabe 8 it Hilfe von Sade Babatunde//
+//Aufgabe 8 mit Hilfe von Nadine Perisic//
 window.addEventListener("load", function () {
     document.querySelector("#button1").addEventListener("click", function () {
         playSample("A.mp3");
@@ -31,15 +31,18 @@ window.addEventListener("load", function () {
     document.querySelector("#deletebutton").addEventListener("click", deleteBeat);
     document.querySelector("#micbutton").addEventListener("click", createBeat);
 });
-//Recording Funktion
+//Funktion für das Rekording//
 function playSample(sound) {
-    if (isRecording) {
+    if (isRecording)
+        : Boolean;
+    {
+        ;
         givenBeat.push(sound);
     }
     let audios = new Audio(sound);
     audios.play();
 }
-// Defieneren der Start-Stop Funktion// 
+//Stopp Button//
 function stop() {
     var play = document.querySelector("#playbutton");
     if (play.getAttribute("class") == "fas fa-play") {
@@ -50,8 +53,7 @@ function stop() {
         play.setAttribute("class", "fas fa-play");
         stopBeat();
     }
-}
-// Defieneren des Anfangsinterval (nachdem er gelöscht wurde kommt er nicht wieder)// 
+} //Loop// 
 let beatIntervalId;
 var givenBeat = ["hihat.mp3", "kick.mp3", "snare.mp3"];
 let isRecording = false;
@@ -63,14 +65,14 @@ beatIntervalId = setInterval(function () {
         counter = 0;
     }
 }, 500);
-// Wenn Stop dann wird Interval gelöscht
+//Bei Stopp wird Intervall gelöscht//
 function stopBeat() {
     clearInterval(beatIntervalId);
 }
 function deleteBeat() {
     givenBeat = [];
 }
-// Aufnahme Funktion (was für ein Käse)//
+//Funktion Aufnahme//
 function createBeat() {
     if (isRecording == false) {
         isRecording = true;
