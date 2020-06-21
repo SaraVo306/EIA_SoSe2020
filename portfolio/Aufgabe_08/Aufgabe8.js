@@ -67,7 +67,7 @@ function startBeat() {
         if (counter >= givenBeat.length) {
             counter = 0;
         }
-    }, 500);
+    }, 400);
 }
 function stopBeat() {
     clearInterval(beatIntervalId);

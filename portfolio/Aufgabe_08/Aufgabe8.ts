@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
     document.querySelector("#button9").addEventListener("click", function () {
         playSample("snare.mp3");
     });
-    
+
     document.querySelector("#playbutton").addEventListener("click", stop);
     document.querySelector("#deletebutton").addEventListener("click", deleteBeat);
     document.querySelector("#micbutton").addEventListener("click", createBeat);
@@ -59,18 +59,18 @@ function stop(): void {
     }
 }
 //Loop// 
-let beatIntervalId;
+let beatIntervalId: string;
 var givenBeat: string[] = ["hihat.mp3", "kick.mp3", "snare.mp3"];
-let isRecording = false;
-function startBeat() {
-    var counter = 0;
+let isRecording: boolean = false;
+function startBeat(): void {
+    var counter: number = 0;
     beatIntervalId = setInterval(function () {
         playSample(givenBeat[counter]);
         counter += 1;
         if (counter >= givenBeat.length) {
             counter = 0;
         }
-    }, 500);
+    }, 400);
 }
 
 function stopBeat(): void {
