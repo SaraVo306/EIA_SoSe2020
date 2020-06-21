@@ -1,4 +1,4 @@
-// Teile von Aufgabe 8 it Hilfe von Nadine Perisic//
+// Teile von Aufgabe 8 mit Hilfe von Nadine Perisic//
 function playSample(mp3) {
     var allSounds = new Audio(mp3);
     allSounds.play();
