@@ -1,5 +1,5 @@
 //Aufgabe 7.1//
-var allSamples: string []= ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
+var allSamples: string [] = ["A.mp3", "C.mp3", "F.mp3", "G.mp3", "hihat.mp3", "kick.mp3", "laugh-1.mp3", "laugh-2.mp3", "snare.mp3"];
 
 function playSample(mp3: string) {
     var allSounds: HTMLAudioElement = new Audio(mp3);
