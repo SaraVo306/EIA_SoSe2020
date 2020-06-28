@@ -25,5 +25,6 @@ window.addEventListener("load", function () {
         console.log(todos);
     });
     //Ansatz delete Funktion//
+    // vielleicht Array Elemente löschen mit todos.push(), aber wie?//
 });
 //# sourceMappingURL=Aufgabe9.js.map
