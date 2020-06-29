@@ -23,10 +23,12 @@ window.addEventListener("load", function () {
         drawList();
         input.value = "";
         console.log(todos);
+
+        //delete
+        var dlte = document.querySelector("#delete");
+        deleteElement.addEventListener("click", function (
+            for (var i = 0; i < dlte.length; i++) {
+            dlte[i].onclick = function () { 
+        ))
+     };
     });
-    //Ansatz delete Funktion//
-
-    // vielleicht Array Elemente löschen mit todos.push(), aber wie?//
-
-
-});
