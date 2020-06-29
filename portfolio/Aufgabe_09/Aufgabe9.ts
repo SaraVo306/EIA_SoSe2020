@@ -24,11 +24,16 @@ window.addEventListener("load", function () {
         input.value = "";
         console.log(todos);
 
-        //delete
-        var dlte = document.querySelector("#delete");
-        deleteElement.addEventListener("click", function (
-            for (var i = 0; i < dlte.length; i++) {
-            dlte[i].onclick = function () { 
-        ))
-     };
+
+        //Löscht die erledigten Punkte
+        var closethetodo = document.getElementsByClassName("fas fa-trash-alt");
+        var i;
+        for (i = 0; i < closethetodo.length; i++) {
+            closethetodo[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+                count--;
+                document.getElementById("#Span").innerHTML = String(count);
+            };
+        }
     });
