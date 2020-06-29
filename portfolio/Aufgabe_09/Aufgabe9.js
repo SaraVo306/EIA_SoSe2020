@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
         drawList();
         input.value = "";
         console.log(todos);
-        //Löscht die erledigten Punkte
+        //Löschen, funktioniert erst sobald ein To-Do hinzugefügt wurde//
         var closethetodo = document.getElementsByClassName("fas fa-trash-alt");
         var i;
         for (i = 0; i < closethetodo.length; i++) {
