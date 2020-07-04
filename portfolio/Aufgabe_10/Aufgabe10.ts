@@ -139,7 +139,8 @@ function updateCounter(): void {
         }
 
     }
-    counterDoneDOMElement.innerHTML = todos1.length + "in done";
+    counterDoneDOMElement.innerHTML = counterChecked + " in done";
+    counterOpenDOMElement.innerHTML = counterOpen + " in open";
 }
 
 /**
