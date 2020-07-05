@@ -11,8 +11,8 @@
  * Werte, bspw. Stelle 0 im Array todosText und Stelle 0 im Array
  * todosChecked gehören zusammen zu einem ToDo.
  */
-var todosText = ["Lorem", "Ipsum", "Dolor"];
-var todosChecked = [true, false, false];
+//var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];//
+//var todosChecked: boolean[] =    [true    , false   , false];//
 var todos1 = [
     {
         text: "Lorem", isChecked: true
@@ -68,7 +68,7 @@ function drawListToDOM() {
     // alle todos erst einmal aus dem DOM löschen
     todosDOMElement.innerHTML = "";
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (let index = 0; index < todosText.length; index++) {
+    for (let index = 0; index < todos1.length; index++) {
         /**
          * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen,
          * die Objekt-Instansierung ist aber übersichtlicher)

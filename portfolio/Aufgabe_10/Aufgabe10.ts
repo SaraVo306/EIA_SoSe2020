@@ -11,9 +11,10 @@
  * Werte, bspw. Stelle 0 im Array todosText und Stelle 0 im Array
  * todosChecked gehören zusammen zu einem ToDo.
  */
-var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
-var todosChecked: boolean[] =    [true    , false   , false];
+//var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];//
+//var todosChecked: boolean[] =    [true    , false   , false];//
 
+//Hilfe von Markus im Praktikum und Autausch mit Colleen Zeller//
 interface Todo {
     text: string;
     isChecked: boolean;
