@@ -224,3 +224,4 @@ function deleteTodo(index: number): void {
      */
     drawListToDOM();
 }
+

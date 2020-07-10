@@ -5,22 +5,27 @@ window.addEventListener("load", function () {
         smart: true,
         action: function (i, wildcard) {
             console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todos1.unshift({
+                text: wildcard,
+                isChecked: true
+            });
+            drawListToDOM();
         }
     });
-    function startContinuousArtyom() {
+    function startContinousArtyom() {
         artyom.fatality();
         setTimeout(function () {
             artyom.initialize({
                 lang: "de-DE",
-                continuous: true,
+                continous: true,
                 listen: true,
-                interimResults: true,
+                interinResults: true,
                 debug: true
             }).then(function () {
                 console.log("Ready!");
             });
-        }, 250);
+        }, 150);
     }
-    startContinuousArtyom();
+    startContinousArtyom();
 });
-//# sourceMappingURL=playgroud-artyom.script.js.map
+//# sourceMappingURL=playgroud-artyom-script.js.map
