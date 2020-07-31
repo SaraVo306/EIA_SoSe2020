@@ -1,5 +1,5 @@
 body {
-    background: darkgoldenrod;
+    background:black;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -86,52 +86,7 @@ img:hover {
     #checkbox{
     text-align: center;
     }
-    
-    #boobutton{
-    padding: 20px;
-    cursor: pointer;
-    }
-    
-    #laughbutton{
-    padding: 20px;
-    cursor: pointer;
-    }
-    
-    #duckbutton{
-    padding: 20px;
-    cursor: pointer;
-    }
-    
-    #boingbutton{
-    padding: 20px;
-    cursor: pointer;
-    }
-    
-    #applausebutton{
-    padding: 20px;
-    cursor: pointer;
-    }
-    
-    #boobutton:hover {
-    opacity: 0.6;
-    }
-    
-    #laughbutton:hover {
-    opacity: 0.6;
-    }
-    
-    #duckbutton:hover {
-    opacity: 0.6;
-    }
-    
-    #boingbutton:hover {
-    opacity: 0.6;
-    }
-    
-    #applausebutton:hover {
-    opacity: 0.6;
-    }
-    
+   
     img:hover {
     opacity: 0.6;
     cursor: pointer;
@@ -159,7 +114,7 @@ img:hover {
     }
     
     .highlight{
-    background-color: blanchedalmond;
+    background-color: white!important;
     }
     
     .toggle{

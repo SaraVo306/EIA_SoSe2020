@@ -1,3 +1,4 @@
+window.addEventListener('load', function(){
 let order: Array<number> = []; // Array, in dem die zufällig generierten Töne gespeichert werden, die der PC abspielt
 let playerOrder: Array<number> = []; // Array, in dem die vom Nutzer ausgewählten Töne gespeichert werden (wird jede Runde neu gefüllt)
 let flash: number; // Speichert wie viele Sounds gespielt wurden (in der jeweiligen Runde)
@@ -12,37 +13,35 @@ let level: number; // gibt die Anzahl der Sounds an, die wiederholt werden müss
 let startPressed: number = 0; //anzahl wie oft der startbutton benutzt wurde
 let playing: boolean = false;
 
-
 const turnCounter: HTMLElement = document.querySelector("#turn"); //speichert das HTML Element mit der id turn, hier schreiben wir später rein, in welchem Zug wir uns befinden
 const bell: HTMLElement = document.querySelector("#button1"); // speichert den boobutton
 const sirene: HTMLElement = document.querySelector("#button2"); // speichert den laughbutton
 const laugh: HTMLElement = document.querySelector("#button3"); // speichert den duckbutton
 const snare: HTMLElement = document.querySelector("#button4"); // speichert den boingbutton
 const hihat: HTMLElement = document.querySelector("#button5"); // speichert den applausebutton
-const onButton: HTMLInputElement = document.querySelector("#on"); // speichert den on Button
 const startButton: HTMLElement = document.querySelector("#start"); // speichert den Startbutton
 const levelOne: HTMLElement = document.querySelector("#levelone"); // speichert den level 1 button
 const levelTwo: HTMLElement = document.querySelector("#leveltwo"); // speichert den level 2 button
 const levelThree: HTMLElement = document.querySelector("#levelthree"); // speichert den level 3 button
 const levelFour: HTMLElement = document.querySelector("#levelfour"); // speichert den level 4 button
 const soundButtons: Array<HTMLElement> = [bell, sirene, laugh, snare, hihat];
-const levelButtons: Array<HTMLElement> = [levelOne, levelTwo, levelThree, levelFour];
+//const levelButtons: Array<HTMLElement> = [levelOne, levelTwo, levelThree, levelFour];
 
 
 function addLevelListeners(): void {
-    levelOne.addEventListener('click', (event) => {
+    levelOne.addEventListener('click', function (){
         level = 5;
     }); // Auf das click event des level one buttons wird eine anonyme Funktion registriert, die die Level Variable auf 5 setzt, d.h. dass jedes mal wenn jemand auf denen level 1 button drückt, die level Variable auf 5 gesetzt wird. Erinnerung: Die level Variable speichert, wie viele Sounds der User wiederholen muss, damit er gewinnt
 
-    levelTwo.addEventListener('click', (event) => {
+    levelTwo.addEventListener('click', function (){
         level = 15;
     }); // Auf das click event des level one buttons wird eine anonyme Funktion registriert, die die Level Variable auf 10 setzt, d.h. dass jedes mal wenn jemand auf denen level 2 button drückt, die level Variable auf 10 gesetzt wird. Erinnerung: Die level Variable speichert, wie viele Sounds der User wiederholen muss, damit er gewinnt
 
-    levelThree.addEventListener('click', (event) => {
+    levelThree.addEventListener('click', function (){
         level = 25;
     }); // Auf das click event des level one buttons wird eine anonyme Funktion registriert, die die Level Variable auf 15 setzt, d.h. dass jedes mal wenn jemand auf denen level 3 button drückt, die level Variable auf 15 gesetzt wird. Erinnerung: Die level Variable speichert, wie viele Sounds der User wiederholen muss, damit er gewinnt
 
-    levelFour.addEventListener('click', (event) => {
+    levelFour.addEventListener('click', function (){
         level = 35;
     }); // Auf das click event des level one buttons wird eine anonyme Funktion registriert, die die Level Variable auf 25 setzt, d.h. dass jedes mal wenn jemand auf denen level 4 button drückt, die level Variable auf 25 gesetzt wird. Erinnerung: Die level Variable speichert, wie viele Sounds der User wiederholen muss, damit er gewinnt
 }
@@ -50,7 +49,7 @@ function addLevelListeners(): void {
 addLevelListeners();
 
 
-startButton.addEventListener('click', (event) => { // Registiert anonyme Funktion auf das click event des startButtons, d.h. nachfolgender code wird ausgeführt, sobald der user den start button drück
+startButton.addEventListener('click', function (){ // Registiert anonyme Funktion auf das click event des startButtons, d.h. nachfolgender code wird ausgeführt, sobald der user den start button drück
     if (!level) {
         alert("Bitte Level auswählen");
         return;
@@ -85,6 +84,7 @@ function play() { // funktion zum starten des Spiels
 }
 
 function gameTurn() { // funktion zum ausführen eines einzelnen Spielzugs des pcs
+    debugger
     on = false; // Setze on Variable (boolean) auf false. Dies heißt in diesem Fall nicht, dass das Spiel ausgeschaltet wird, sondern dient dazu, dass der Spieler während der PC Sounds abspielt keine eigenen Sounds dazwischen spielen kann 
 
     if (flash == turn) { // Überprüft, der Wert der flash Variable dem Wert der turn Variable entspricht. Also ob die Anzahl der gespielten Sounds dem Wert des aktuellen Zugs entspricht. Die Überprufung dient also dazu, um herauszufinden ob der Zug des PCs vorbei ist, also dass er für diese Runde alle vorgegebenen Sounds abgespielt hat
@@ -141,62 +141,64 @@ function five() { // analog
 }
 
 
-boo.addEventListener('click', (event) => {  // wir registrieren auf das click event des boo buttons folgenden code 
+bell.addEventListener('click', function () {  // wir registrieren auf das click event des boo buttons folgenden code 
     if (on && playing) { // prüfen, ob die variable on auf true ist (Erinnerung: die on Variable gibt hier an, ob der User derzeit buttons betätigen kann), falls ja:
-        playerOrder.push(1); // fügt dem playerOrder Array (dieser speichert die Sounds, die der Spieler ausgewählt hat) eine 1 hinzu (Diese steht für den boo sound)
+        playerOrder.push(1); 
+        
+         // fügt dem playerOrder Array (dieser speichert die Sounds, die der Spieler ausgewählt hat) eine 1 hinzu (Diese steht für den boo sound)
         check(); // prüfen, ob die gewählten sounds korrekt sind und ob das spiel gewonnen wurde, genaue Funktionsweise später
         one(); // spielt den boo sound ab
         if (!win) { // prüft ob das Spiel gewonnen ist, falls nicht:
             setTimeout(() => { // macht 300 ms pause. setTimeout Funktion wurde oben schon erklärt
-            }, 300);
+            }, 500);
         }
     }
 })
 
-laugh.addEventListener('click', (event) => { //analog
+sirene.addEventListener('click', function (){ //analog
     if (on && playing) {
         playerOrder.push(2);
         check();
         two();
         if (!win) {
             setTimeout(() => {
-            }, 300);
+            }, 500);
         }
     }
 })
 
-duck.addEventListener('click', (event) => { //analog
+laugh.addEventListener('click', function (){ //analog
     if (on && playing) {
         playerOrder.push(3);
         check();
         three();
         if (!win) {
             setTimeout(() => {
-            }, 300);
+            }, 500);
         }
     }
 })
 
-boing.addEventListener('click', (event) => { //analog
+snare.addEventListener('click', function (){ //analog
     if (on && playing) {
         playerOrder.push(4);
         check();
         four();
         if (!win) {
             setTimeout(() => {
-            }, 300);
+            }, 500);
         }
     }
 })
 
-applause.addEventListener('click', (event) => {//analog
+hihat.addEventListener('click', function (){//analog
     if (on && playing) {
         playerOrder.push(5);
         check();
         five();
         if (!win) {
             setTimeout(() => {
-            }, 300);
+            }, 500);
         }
     }
 })
@@ -277,7 +279,7 @@ function playSample(number: number) { // spielt sounds ab, bekommt eine nummer (
                 sound = new Audio("hihat.mp3"); // analog
                 break; // analog
             case 6:
-                sound = new Audio("lose.mp3");
+                sound = new Audio("losse.mp3");
                 break;
         } // zusätzliche Anmerkung zu dem switch statement: Das switch statement könnte man ebenfalls durch 5 if-else-statements ersetzen, dies würde allerdings sehr unübersichtlich werden und würde es erschweren den code zu interpretieren. da das switch statement meiner meinung nach nicht so schwer zu verstehen ist, habe ich das switch statement zur besseren übersichtlichkeit benutzt
     }
@@ -325,3 +327,5 @@ function removeClass() {
         element.classList.remove("highlight");
     })
 }
+
+});

@@ -1,7 +1,10 @@
+/*
 // Teile von Aufgabe 8 mit Hilfe von Nadine Perisic//
-function playSample(mp3) {
-    var allSounds = new Audio(mp3);
+
+function playSample(mp3: string): void {
+    var allSounds: HTMLAudioElement = new Audio(mp3);
     allSounds.play();
+
 }
 window.addEventListener("load", function () {
     document.querySelector("#button1").addEventListener("click", function () {
@@ -31,20 +34,21 @@ window.addEventListener("load", function () {
     document.querySelector("#button9").addEventListener("click", function () {
         playSample("snare.mp3");
     });
+
     document.querySelector("#playbutton").addEventListener("click", stop);
     document.querySelector("#deletebutton").addEventListener("click", deleteBeat);
     document.querySelector("#micbutton").addEventListener("click", createBeat);
 });
 //Funktion zum Rekorden//
-function playSample(sound) {
+function playSample(sound: string): void {
     if (isRecording) {
         givenBeat.push(sound);
     }
-    let audios = new Audio(sound);
+    let audios: HTMLAudioElement = new Audio(sound);
     audios.play();
 }
 //Start-Stop Fkt//
-function stop() {
+function stop(): void {
     var play = document.querySelector("#playbutton");
     if (play.getAttribute("class") == "fas fa-play") {
         play.setAttribute("class", "fas fa-stop");
@@ -55,28 +59,29 @@ function stop() {
         stopBeat();
     }
 }
-//Loop// 
-let beatIntervalId;
-var givenBeat = ["hihat.mp3", "kick.mp3", "snare.mp3"];
-let isRecording = false;
-function startBeat() {
-    var counter = 0;
+//Loop//
+let beatIntervalId: string;
+var givenBeat: string[] = ["hihat.mp3", "kick.mp3", "snare.mp3"];
+let isRecording: boolean = false;
+function startBeat(): void {
+    var counter: number = 0;
     beatIntervalId = setInterval(function () {
         playSample(givenBeat[counter]);
         counter += 1;
         if (counter >= givenBeat.length) {
             counter = 0;
         }
-    }, 400);
+    },                           400);
 }
-function stopBeat() {
+
+function stopBeat(): void {
     clearInterval(beatIntervalId);
 }
-function deleteBeat() {
+function deleteBeat(): void {
     givenBeat = [];
 }
 //Aufnahme//
-function createBeat() {
+function createBeat(): void {
     if (isRecording == false) {
         isRecording = true;
         document.getElementById("#micbutton");
@@ -85,7 +90,7 @@ function createBeat() {
         isRecording = false;
     }
 }
-function isRec() {
+function isRec(): void {
     var play = document.querySelector("#recbutton");
     if (play.getAttribute("id") == "micbutton") {
         play.setAttribute("id", "recbutton");
@@ -95,6 +100,7 @@ function isRec() {
         play.setAttribute("id", "micbutton");
         stopBeat();
     }
-}
-;
+});
+
+*/
 //# sourceMappingURL=Aufgabe8.js.map

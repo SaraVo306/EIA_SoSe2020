@@ -1,3 +1,5 @@
+
+/*
 // Teile von Aufgabe 8 mit Hilfe von Nadine Perisic//
 
 function playSample(mp3: string): void {
@@ -100,3 +102,5 @@ function isRec(): void {
         stopBeat();
     }
 });
+
+*/

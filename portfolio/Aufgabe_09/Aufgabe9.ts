@@ -1,3 +1,4 @@
+ /*
 // Aufgabe 9 mit Tipps von Herr Rausch
 // Array aufstellen
 var todos: string[] = ["Einkaufen gehen", "Kuchen backen", "Spazieren gehen", "Für die Uni lernen"];
@@ -37,3 +38,4 @@ window.addEventListener("load", function () {
             };
         }
     });
+    */
