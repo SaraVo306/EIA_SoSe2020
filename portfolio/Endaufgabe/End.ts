@@ -84,7 +84,6 @@ function play() { // funktion zum starten des Spiels
 }
 
 function gameTurn() { // funktion zum ausführen eines einzelnen Spielzugs des pcs
-    debugger
     on = false; // Setze on Variable (boolean) auf false. Dies heißt in diesem Fall nicht, dass das Spiel ausgeschaltet wird, sondern dient dazu, dass der Spieler während der PC Sounds abspielt keine eigenen Sounds dazwischen spielen kann 
 
     if (flash == turn) { // Überprüft, der Wert der flash Variable dem Wert der turn Variable entspricht. Also ob die Anzahl der gespielten Sounds dem Wert des aktuellen Zugs entspricht. Die Überprufung dient also dazu, um herauszufinden ob der Zug des PCs vorbei ist, also dass er für diese Runde alle vorgegebenen Sounds abgespielt hat
@@ -279,7 +278,7 @@ function playSample(number: number) { // spielt sounds ab, bekommt eine nummer (
                 sound = new Audio("hihat.mp3"); // analog
                 break; // analog
             case 6:
-                sound = new Audio("losse.mp3");
+                sound = new Audio("loose.mp3");
                 break;
         } // zusätzliche Anmerkung zu dem switch statement: Das switch statement könnte man ebenfalls durch 5 if-else-statements ersetzen, dies würde allerdings sehr unübersichtlich werden und würde es erschweren den code zu interpretieren. da das switch statement meiner meinung nach nicht so schwer zu verstehen ist, habe ich das switch statement zur besseren übersichtlichkeit benutzt
     }

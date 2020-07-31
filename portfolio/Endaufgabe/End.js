@@ -72,7 +72,6 @@ window.addEventListener('load', function () {
         intervalId = setInterval(gameTurn, 800); // In der Variable intervalId wird die Funktion setInterval, die mit den Argumenten gameTurn (das ist eine Funktion, wird später erklärt) und 800 aufgerufen wird. setInterval ist eine vordefinierte Funktion von TypeScript. Sie erwartet zwei Argumente: 1. eine Funktion oder code der ausgeführt werden soll und einen Zeitabstand. Die Funktion wiederholt den Code oder die Funktion, die sie als erstes Argument bekommt, in dem Zeitabstand, den sie als zweites Argument bekommt. In unserem Fall wird also alle 800 Milisekunden die Funktion gameTurn aufgerufen. Dies geschieht so lange, bis die Funktion clearInterval mit dem Argument intervalId aufgerufen wird. (siehe oben/unten)
     }
     function gameTurn() {
-        debugger;
         on = false; // Setze on Variable (boolean) auf false. Dies heißt in diesem Fall nicht, dass das Spiel ausgeschaltet wird, sondern dient dazu, dass der Spieler während der PC Sounds abspielt keine eigenen Sounds dazwischen spielen kann 
         if (flash == turn) { // Überprüft, der Wert der flash Variable dem Wert der turn Variable entspricht. Also ob die Anzahl der gespielten Sounds dem Wert des aktuellen Zugs entspricht. Die Überprufung dient also dazu, um herauszufinden ob der Zug des PCs vorbei ist, also dass er für diese Runde alle vorgegebenen Sounds abgespielt hat
             clearInterval(intervalId); // Erklärung der Funktionsweise siehe vorherige Verwendung, lässt den PC aufhören weiter Sounds abzuspielen
@@ -249,7 +248,7 @@ window.addEventListener('load', function () {
                     sound = new Audio("hihat.mp3"); // analog
                     break; // analog
                 case 6:
-                    sound = new Audio("losse.mp3");
+                    sound = new Audio("loose.mp3");
                     break;
             } // zusätzliche Anmerkung zu dem switch statement: Das switch statement könnte man ebenfalls durch 5 if-else-statements ersetzen, dies würde allerdings sehr unübersichtlich werden und würde es erschweren den code zu interpretieren. da das switch statement meiner meinung nach nicht so schwer zu verstehen ist, habe ich das switch statement zur besseren übersichtlichkeit benutzt
         }
